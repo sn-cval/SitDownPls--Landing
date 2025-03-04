@@ -1,0 +1,690 @@
+.header {
+  margin-bottom: 32px;
+  overflow: hidden;
+
+  @media (max-width: 765px) {
+    margin-bottom: 30px;
+  }
+
+  &--catalog {
+    @media (max-width: 765px) {
+      margin-bottom: 23px;
+    }
+  }
+
+  &--product {
+    margin-bottom: 48px;
+
+    @media (max-width: (1290px)) {
+      margin-bottom: 33px;
+    }
+
+    @media (max-width: (975px)) {
+      margin-bottom: 9px;
+    }
+
+    @media (max-width: (500px)) {
+      margin-bottom: 23px;
+    }
+  }
+
+  &__top {
+    background-color: var(--grey-bg);
+
+    @media (max-width: 1290px) {
+      background-color: var(--light-color);
+    }
+
+    @media (max-width: 765px) {
+      padding: 10px 0;
+      border-top: 1px solid var(--grey-bg);
+      border-bottom: 1px solid var(--grey-bg);
+    }
+
+    &-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 auto;
+      padding: 14px 15px;
+      max-width: var(--container-width);
+
+      @media (max-width: 1290px) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+      }
+
+      @media (max-width: 765px) {
+        align-items: center;
+        flex-direction: row;
+        padding: 0 12px;
+      }
+    }
+
+    &-content {
+      max-width: 80%;
+
+      @media (max-width: 1290px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 7px 36px;
+        max-width: 100%;
+        width: 100%;
+        background-color: var(--grey-bg);
+      }
+
+      @media (max-width: 975px) {
+        padding: 19px 64px;
+      }
+
+      @media (max-width: 765px) {
+        display: none;
+      }
+    }
+
+    &-list {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 49px;
+      transform: translateX(8px);
+
+      @media (max-width: 1290px) {
+        transform: translateX(-9px);
+      }
+
+      @media (max-width: 975px) {
+        gap: 19px;
+        transform: translateX(0);
+      }
+    }
+
+    &-item {
+      font-size: 14px;
+      line-height: 100%;
+
+      &:first-child {
+        transform: translateX(2px);
+
+        @media (max-width: 1290px) {
+          transform: translateX(0);
+        }
+      }
+    }
+
+    &-link {
+      padding: 0 8px;
+      color: var(--grey-color);
+      transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:focus-visible {
+        color: var(--bg-hover);
+        background-color: var(--bg-focus);
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: var(--bg-color);
+        }
+      }
+
+      &:active {
+        color: var(--bg-hover);
+      }
+    }
+  }
+
+  &__middle {
+    &-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 34px 15px 30px;
+
+      @media (max-width: 1290px) {
+        padding: 33px 31px 33px 36px;
+      }
+
+      @media (max-width: 975px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 31px;
+        padding: 27px 60px 36px 61px;
+      }
+
+      @media (max-width: 765px) {
+        padding: 15px 0 19px 12px;
+      }
+    }
+
+    &-content {
+      @media (max-width: 975px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        transform: translateX(-11px);
+      }
+
+      @media (max-width: 765px) {
+        display: none;
+      }
+    }
+
+    &-nav {
+      max-width: 90%;
+
+      @media (max-width: 1290px) {
+        max-width: 100%;
+      }
+    }
+
+    &-list {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 78px;
+      transform: translateX(4px);
+
+      @media (max-width: 1290px) {
+        gap: 28px;
+        transform: none;
+      }
+
+      @media (max-width: 975px) {
+        gap: 26px;
+        transform: translateX(3px);
+      }
+
+      @media (max-width: 765px) {
+        flex-wrap: nowrap;
+        gap: 16px;
+        overflow-x: scroll;
+        transform: translateX(-4px);
+
+        &::-webkit-scrollbar {
+          width: 0;
+          height: 0;
+        }
+      }
+    }
+
+    &-item {
+      font-size: var(--main-size);
+
+      &:first-child {
+        transform: translateX(2px);
+
+        @media (max-width: 975px) {
+          transform: translateX(-3px);
+        }
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        @media (max-width: 975px) {
+          transform: translateX(-2px);
+        }
+      }
+
+      @media (max-width: 975px) {
+        font-size: 14px;
+      }
+
+      @media (max-width: 765px) {
+        flex-shrink: 0;
+      }
+    }
+
+    &-link {
+      padding: 0 7px;
+      color: var(--desc-color);
+      transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:focus-visible {
+        color: var(--desc-color);
+        background-color: var(--bg-focus);
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: var(--bg-color);
+        }
+      }
+
+      &:active {
+        color: var(--bg-hover);
+      }
+    }
+  }
+
+  &__bottom {
+    &-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @media (max-width: 1290px) {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+      }
+
+      @media (max-width: 975px) {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
+  }
+
+  &__phone {
+    @media (max-width: 1290px) {
+      padding: 18px 36px;
+    }
+
+    @media (max-width: 975px) {
+      padding: 18px 72px;
+    }
+
+    @media (max-width: 765px) {
+      padding: 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    color: var(--color-default);
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      background-color: var(--color-focus);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--color-hover);
+      }
+    }
+
+    &:active {
+      color: var(--color-active);
+    }
+  }
+
+  &__number {
+    font-size: 14px;
+    line-height: 100%;
+  }
+
+  &__logo {
+    display: none;
+
+    @media (max-width: 765px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 11px;
+      padding: 12px;
+      background-color: var(--grey-bg);
+    }
+  }
+
+  &__icon {
+    max-width: 187px;
+    width: 100%;
+    transform: translateY(-2px);
+    transition: outline 0.3s ease-in-out;
+
+    @media (max-width: 1290px) {
+      transform: translateY(0);
+    }
+
+    @media (max-width: 975px) {
+      transform: translateX(18px);
+    }
+
+    @media (max-width: 765px) {
+      transform: translateX(0);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: 1px dashed var(--bg-hover);
+      outline-offset: 2px;
+    }
+  }
+
+  &__form {
+    position: relative;
+    max-width: 1060px;
+    max-height: 60px;
+    width: 100%;
+    height: 100%;
+
+    @media (max-width: 1290px) {
+      grid-column: 7 span;
+    }
+
+    @media (max-width: 975px) {
+      grid-column: 6 span;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  &__search {
+    position: absolute;
+    left: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: var(--grey-color);
+    transition: fill 0.3s ease-in-out;
+
+    @media (max-width: 975px) {
+      left: 28px;
+    }
+
+    @media (max-width: 765px) {
+      left: 32px;
+      top: 48%;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 18px 32px 18px 58px;
+    font-size: var(--main-size);
+    line-height: 120%;
+    color: var(--desc-color);
+    background-color: var(--grey-bg);
+    transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    @media (max-width: 1290px) {
+      padding: 20px 32px 18px 58px;
+    }
+
+    @media (max-width: 975px) {
+      padding: 20px 32px 18px 53px;
+    }
+
+    @media (max-width: 765px) {
+      padding: 18px 32px 18px 57px;
+    }
+
+    &::placeholder {
+      color: var(--grey-color);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      border: 2px solid var(--bg-color);
+      background-color: var(--bg-active);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: var(--form-hover);
+      }
+    }
+
+    &:active {
+      border: 2px solid transparent;
+      background-color: var(--grey-bg);
+
+      & + .header__search {
+        fill: var(--bg-color);
+      }
+    }
+  }
+
+  &__button {
+    position: absolute;
+    right: 32px;
+    top: 50%;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    background-color: transparent;
+    transform: translateY(-50%);
+    transition: background-color 0.3s ease-in-out;
+
+    @media (max-width: 1290px) {
+      right: 39px;
+    }
+
+    @media (max-width: 975px) {
+      right: 28px;
+    }
+
+    @media (max-width: 765px) {
+      right: 32px;
+      top: 48%;
+    }
+
+    svg g path,
+    svg g circle {
+      transition: stroke 0.3s ease-in-out;
+    }
+
+    svg defs clipPath rect {
+      transition: fill 0.3s ease-in-out;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      background-color: var(--btn-focus);
+    }
+
+    &:focus-visible svg g path {
+      stroke: var(--light-color);
+    }
+
+    &:focus-visible svg g circle {
+      stroke: var(--bg-color);
+    }
+
+    &:focus-visible svg defs clipPath rect {
+      fill: var(--light-color);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: var(--bg-color);
+
+        svg g path {
+          stroke: var(--light-color);
+        }
+      }
+    }
+
+    &:active {
+      background-color: var(--bg-hover);
+
+      svg g path {
+        stroke: var(--light-color);
+      }
+
+      svg g circle {
+        stroke: var(--bg-hover);
+      }
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    transform: translate(2px, 1px);
+
+    &--desktop {
+      @media (max-width: 1290px) {
+        display: none;
+      }
+    }
+
+    &--tablet {
+      display: none;
+
+      @media (max-width: 1290px) {
+        display: flex;
+      }
+
+      @media (max-width: 975px) {
+        display: none;
+      }
+
+      &-sm {
+        display: none;
+
+        @media (max-width: 975px) {
+          display: flex;
+        }
+      }
+    }
+
+    &--mobile {
+      display: none;
+
+      @media (max-width: 765px) {
+        display: flex;
+      }
+    }
+  }
+
+  &__account,
+  &__basket {
+    border: none;
+    cursor: pointer;
+    color: var(--bg-color);
+    background-color: transparent;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      color: var(--light-color);
+      background-color: var(--btn-focus);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--btn-focus);
+      }
+    }
+
+    &:active {
+      color: var(--bg-hover);
+    }
+  }
+
+  &__account {
+    padding: 3px 3px 1px;
+  }
+
+  &__basket {
+    position: relative;
+    padding: 3px 3px 1px 13px;
+  }
+
+  &__count {
+    position: absolute;
+    left: 3px;
+    top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+    height: 15px;
+    border-radius: 100%;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 100%;
+    color: var(--light-color);
+    background-color: var(--color-default);
+  }
+
+  &__nav {
+    margin-top: 23px;
+    font-size: 14px;
+    line-height: 100%;
+    color: var(--grey-color);
+
+    @media (max-width: (500px)) {
+      display: none;
+    }
+
+    &--mt {
+      margin-top: 20px;
+
+      @media (max-width: (1290px)) {
+        margin-top: 23px;
+      }
+    }
+  }
+
+  &__path {
+    transition: color .3s ease-in-out;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      color: var(--desc-color);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--bg-color);
+      }
+    }
+
+    &:active {
+      color: var(--bg-hover);
+    }
+
+    &--current {
+      color: var(--bg-hover);
+    }
+  }
+
+  &__slash {
+    display: inline-block;
+    margin: 0 1px;
+  }
+}

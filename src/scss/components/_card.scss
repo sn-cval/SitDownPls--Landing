@@ -1,0 +1,291 @@
+.card {
+  padding: 32px 15px 30px;
+  border-radius: 10px;
+  background-color: var(--grey-bg);
+
+  @media (max-width: 550px) {
+    padding: 17px 15px 16px;
+  }
+
+  &--two {
+    @media (max-width: 550px) {
+      padding: 17px 18px 16px 14px;
+    }
+  }
+
+  &--three {
+    padding: 32px 14px 30px;
+  }
+
+  &--six {
+    padding: 32px 12px 30px;
+
+    @media (max-width: 550px) {
+      padding: 17px 16px 30px 16px;
+    }
+  }
+
+  &__top {
+    margin-bottom: 15px;
+
+    @media (max-width: 550px) {
+      margin-bottom: 20px;
+    }
+
+    &--mb {
+      @media (max-width: 550px) {
+        margin-bottom: 18px;
+      }
+    }
+
+    &--three {
+      @media (max-width: 550px) {
+        margin-bottom: 16px;
+      }
+    }
+
+    &--four {
+      @media (max-width: 550px) {
+        margin-bottom: 10px;
+      }
+    }
+
+    &--five {
+      @media (max-width: 550px) {
+        margin-bottom: 14px;
+      }
+    }
+
+    &--six {
+      @media (max-width: 550px) {
+        margin-bottom: 14px;
+      }
+    }
+
+    &--nine {
+      margin-bottom: 28px;
+    }
+
+    &--eleven {
+      @media (max-width: 550px) {
+        margin-bottom: 7px;
+      }
+    }
+
+    &--mobile {
+      @media (max-width: 550px) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &__bottom {
+    padding: 0 15px;
+
+    @media (max-width: 550px) {
+      padding: 0;
+    }
+
+    &--six {
+      padding: 0 17px;
+
+      @media (max-width: 550px) {
+        padding: 0;
+      }
+    }
+
+    &--pb {
+      @media (max-width: 550px) {
+        padding: 0 2px;
+      }
+    }
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-left: 15px;
+
+    @media (max-width: 550px) {
+      padding-left: 1px;
+    }
+    
+    &--one {
+      margin-bottom: 58px;
+
+      @media (max-width: 550px) {
+        margin-bottom: 21px;
+      }
+    }
+
+    &--two {
+      margin-bottom: 39px;
+
+      @media (max-width: 550px) {
+        margin-bottom: 15px;
+      }
+    }
+
+    &--three {
+      margin-bottom: 37px;
+
+      @media (max-width: 550px) {
+        margin-bottom: 16px;
+      }
+    }
+
+    &--four {
+      margin-bottom: 15px;
+
+      @media (max-width: 550px) {
+        margin-bottom: 11px;
+      }
+    }
+
+    &--five {
+      margin-bottom: 23px;
+
+      @media (max-width: 550px) {
+        margin-bottom: 12px;
+      }
+    }
+
+    &--six {
+      margin-bottom: 23px;
+      padding-left: 18px;
+
+      @media (max-width: 550px) {
+        margin-bottom: 14px;
+        padding-left: 0;
+      }
+    }
+
+    &--seven {
+      margin-bottom: 10px;
+    }
+
+    &--eight {
+      margin-bottom: 16px;
+    }
+
+    &--ten {
+      margin-bottom: 35px;
+
+      @media (max-width: 550px) {
+        margin-bottom: 13px;
+      }
+    }
+
+    &--eleven {
+      margin-bottom: 8px;
+
+      @media (max-width: 550px) {
+        margin-bottom: 6px;
+      }
+    }
+  }
+
+  &__image {
+    &--two,
+    &--three {
+      transform: translateX(2px);
+    }
+
+    &--three {
+      @media (max-width: 550px) {
+        transform: translateX(0);
+      }
+    }
+
+    &--four {
+      transform: translateX(4px);
+
+      @media (max-width: 550px) {
+        transform: translateX(0);
+      }
+    }
+
+    &--eight {
+      transform: translateX(27px);
+    }
+
+    &--nine {
+      transform: translateY(13px);
+    }
+
+    &--ten {
+      transform: translateX(8px);
+
+      @media (max-width: 550px) {
+        transform: translateX(0);
+      }
+    }
+
+    &--eleven {
+      transform: translateX(17px);
+
+      @media (max-width: 550px) {
+        transform: translateX(2px);
+      }
+    }
+
+    &--twelve {
+      transform: translateY(-1px);
+    }
+  }
+
+  &__icon {
+    @media (max-width: 550px) {
+      width: 13px;
+      height: 12px;
+    }
+  }
+
+  &__num {
+    font-size: var(--main-size);
+    line-height: 130%;
+    color: var(--color-default);
+
+    @media (max-width: 550px) {
+      font-size: 12px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    max-width: 224px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    color: var(--desc-color);
+
+    @media (max-width: 550px) {
+      margin-bottom: 16px;
+      max-width: 87%;
+      font-size: 16px;
+    }
+
+    &--width {
+      max-width: 100%;
+    }
+  }
+
+  &__price {
+    display: block;
+    margin-bottom: 22px;
+    font-size: var(--main-size);
+    line-height: 130%;
+    color: var(--price-color);
+
+    @media (max-width: 550px) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__btn {
+    @media (max-width: 550px) {
+      padding: 10px 24px;
+    }
+  }
+}

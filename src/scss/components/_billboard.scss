@@ -1,0 +1,141 @@
+.billboard {
+  margin-bottom: 63px;
+  border-radius: 10px;
+  min-height: 360px;
+  background: url('../img/billboard.jpg') var(--desc-color);
+  background-position: 100% top, 100% bottom;
+  background-repeat: no-repeat;
+
+  @media (max-width: (1290px)) {
+    display: none;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px;
+    height: 100%;
+  }
+
+  &__title {
+    font-family: var(--third-family);
+    font-weight: 900;
+    font-size: 24px;
+    color: var(--orange-color);
+  }
+
+  &__desc {
+    margin-bottom: 15px;
+    max-width: 80%;
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--grey-color);
+  }
+
+  &__btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 700;
+    font-size: var(--main-size);
+    line-height: 120%;
+    color: var(--bg-color);
+    transition: color 0.3s ease-in-out;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 35%;
+      height: 2px;
+      opacity: 0;
+      visibility: hidden;
+      background-color: var(--bg-color);
+      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out,
+        background-color 0.3s ease-in-out;
+    }
+
+    svg g path,
+    svg g circle {
+      transition: stroke 0.3s ease-in-out;
+    }
+
+    svg defs clipPath rect {
+      transition: fill 0.3s ease-in-out;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      &::after {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      & .billboard__icon {
+        background-color: var(--btn-focus);
+      }
+    }
+
+    &:focus-visible svg g path {
+      stroke: var(--light-color);
+    }
+
+    &:focus-visible svg g circle {
+      stroke: var(--bg-color);
+    }
+
+    &:focus-visible svg defs clipPath rect {
+      fill: var(--light-color);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        &::after {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        & .billboard__icon {
+          background-color: var(--bg-color);
+        }
+
+        svg g path {
+          stroke: var(--light-color);
+        }
+      }
+    }
+
+    &:active {
+      color: var(--bg-hover);
+
+      &::after {
+        opacity: 1;
+        visibility: visible;
+        background-color: var(--bg-hover);
+      }
+
+      & .billboard__icon {
+        background-color: var(--bg-hover);
+      }
+
+      svg g path {
+        stroke: var(--light-color);
+      }
+
+      svg g circle {
+        stroke: var(--bg-hover);
+      }
+    }
+  }
+
+  &__icon {
+    border-radius: 100%;
+    transition: background-color 0.3s ease-in-out;
+  }
+}

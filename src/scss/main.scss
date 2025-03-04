@@ -1,0 +1,27 @@
+// базовые подключения
+@import "vars";
+@import "font";
+@import "base";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/checkbox";
+@import "./components/product";
+@import "./components/card";
+@import "./components/hero";
+@import "./components/special";
+@import "./components/rating";
+@import "./components/banner";
+@import "./components/categories";
+@import "./components/useful";
+@import "./components/contacts";
+@import "./components/footer";
+
+//Страница каталога
+@import "./components/sidebar";
+@import "./components/catalog";
+@import "./components/billboard";
+
+//Страница продукта
+@import "./components/goods";
+@import "./components/similar";

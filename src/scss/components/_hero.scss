@@ -1,0 +1,52 @@
+.section-hero {
+  background-image: url("../img/hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media (max-width: 1290px) {
+    background-image: url("../img/hero-bg-1024.jpg");
+  }
+
+  @media (max-width: 975px) {
+    background-image: url("../img/hero-bg-768.jpg");
+  }
+
+  @media (max-width: 550px) {
+    background-image: url("../img/hero-bg-320.jpg");
+    background-size: contain;
+    background-position: top center;
+  }
+
+  &__content {
+    padding: 80px 0;
+    max-width: 496px;
+
+    @media (max-width: 550px) {
+      padding: 30px 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 49px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 66px;
+    color: var(--grey-color);
+
+    @media (max-width: 550px) {
+      margin-bottom: 157px;
+      padding-left: 18px;
+      max-width: 220px;
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  &__btn {
+    @media (max-width: 550px) {
+      display: block;
+      font-size: 16px;
+    }
+  }
+}

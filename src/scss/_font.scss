@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'Muller';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Muller Regular"),
+    url(../fonts/Muller-Regular.woff2) format("woff2"),
+    url(../fonts/Muller-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans Regular"),
+    url(../fonts/OpenSans-Regular.woff2) format("woff2"),
+    url(../fonts/OpenSans-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 600;
+  src: local("Open Sans SemiBold"),
+    url(../fonts/OpenSans-SemiBold.woff2) format("woff2"),
+    url(../fonts/OpenSans-SemiBold.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src: local("Open Sans Bold"),
+    url(../fonts/OpenSans-Bold.woff2) format("woff2"),
+    url(../fonts/OpenSans-Bold.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Playfair-Display';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 900;
+  src: local("Playfair-Display Black"),
+    url(../fonts/PlayfairDisplay-Black.woff2) format("woff2"),
+    url(../fonts/PlayfairDisplay-Black.woff) format("woff");
+}

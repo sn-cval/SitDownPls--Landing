@@ -1,0 +1,26 @@
+.section-rating {
+  padding-top: 34px;
+  padding-bottom: 70px;
+
+  @media(max-width: 550px) {
+    padding-bottom: 56px;
+  }
+
+  &__list {
+    row-gap: 31px;
+
+    @media(max-width: 550px) {
+      row-gap: 15px;
+    }
+  }
+
+  &__item {
+    grid-column: 3 span;
+
+    &--tablet {
+      @media(max-width: 1290px) {
+        display: none;
+      }
+    }
+  }
+}

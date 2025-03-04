@@ -1,0 +1,162 @@
+.product {
+  position: relative;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: var(--grey-bg);
+
+  &--armchair {
+    padding: 73px 30px 30px 30px;
+  }
+
+  &--couch {
+    position: relative;
+    padding: 38px 30px 30px 30px;
+
+    @media (max-width: 1290px) {
+      padding: 146px 22px 30px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 30px;
+      bottom: 30px;
+      width: 230px;
+      height: 107px;
+      background-image: url('../img/product-bg.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @media (max-width: 1290px) {
+        display: none;
+      }
+    }
+  }
+
+  &--alarm {
+    padding: 65px 30px 30px 30px;
+  }
+
+  &--sculpture {
+    padding: 72px 30px 30px 30px;
+  }
+
+  &--sofa {
+    padding: 120px 22px 30px;
+  }
+
+  &--thermometer {
+    padding: 65px 30px 30px;
+  }
+
+  &__content {
+    &--couch {
+      @media (max-width: 1290px) {
+        padding: 0 8px;
+      }
+    }
+
+    &--sofa {
+      padding: 0 8px;
+    }
+  }
+
+  &__flag {
+    position: absolute;
+    left: 0;
+    top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 92px;
+    height: 34px;
+    background-image: url("data:image/svg+xml,%3Csvg width='92' height='34' viewBox='0 0 92 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0H82.1075L92 16.2273L82.1075 34H0V0Z' fill='%23FF862F' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  &__benefit {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--light-color);
+    transform: translateX(-5px);
+  }
+
+  &__image {
+    margin-bottom: 16px;
+
+    @media (max-width: 1290px) {
+      margin-bottom: 14px;
+    }
+
+    &--armchair {
+      transform: translateX(21px);
+    }
+
+    &--couch {
+      transform: translateX(61px);
+
+      @media (max-width: 1290px) {
+        transform: translate(0, -34px);
+      }
+    }
+
+    &--alarm {
+      transform: translate(44px, -2px);
+    }
+
+    &--sculpture {
+      transform: translateX(59px);
+    }
+
+    &--sofa {
+      margin-bottom: 55px;
+    }
+
+    &--thermometer {
+      transform: translate(26px, -2px);
+    }
+  }
+
+  &__title {
+    margin-bottom: 23px;
+    max-width: 222px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    color: var(--desc-color);
+  }
+
+  &__price {
+    margin-bottom: 23px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    line-height: 130%;
+  }
+
+  &__count {
+    &--new {
+      font-size: 18px;
+      color: var(--color-default);
+    }
+
+    &--old {
+      position: relative;
+      font-size: var(--main-size);
+      color: var(--grey-color);
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 8px;
+        height: 1px;
+        width: 100%;
+        background-color: var(--grey-color);
+      }
+    }
+  }
+}
